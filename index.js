@@ -1,5 +1,6 @@
 let currentRound = 0;
 let totalRounds = document.querySelectorAll(".quiz-container").length;
+console.log(totalRounds);
 let correctAnswers = 0;
 let answered = false;
 
@@ -46,8 +47,8 @@ const getNextSection = () => {
   allSections[currentRound].classList.add("hidden");
   currentRound++;
   answered = false;
-  currentRound === 2 ? (allNextButtons[2].innerHTML = "Zum Ergebnis") : "";
-  currentRound === 3
+  currentRound === 3 ? (allNextButtons[3].innerHTML = "Zum Ergebnis") : "";
+  currentRound === 4
     ? showEndScreen()
     : allSections[currentRound].classList.remove("hidden");
 };
